@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
@@ -20,3 +21,15 @@ createRoot(document.getElementById("root")).render(
     </Frame>
   </StrictMode>
 );
+=======
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import Header from "./components/Header.jsx";
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <Header title="기록" />
+  </StrictMode>
+);
+>>>>>>> Stashed changes
