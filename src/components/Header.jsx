@@ -1,14 +1,6 @@
-<<<<<<< Updated upstream
-function Header() {
-  return <div>헤더</div>;
-}
-
-export default Header;
-=======
 import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-// ---------------------- styled-components ----------------------
 
 const HeaderWrapper = styled.header`
   display: flex;
@@ -48,4 +40,3 @@ const Header = ({ title, showBackButton = false, onBack }) => {
 };
 
 export default Header;
->>>>>>> Stashed changes
