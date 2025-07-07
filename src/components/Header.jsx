@@ -1,25 +1,15 @@
-<<<<<<< Updated upstream
-function Header() {
-  return <div>헤더</div>;
-}
-
-export default Header;
-=======
-import React from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
-// ---------------------- styled-components ----------------------
 
-const HeaderWrapper = styled.header`
+const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 16px;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
+  padding: 20px;
+  width: 100%;
+  height: 60px;
+  background-color: red;
 `;
 
 const BackButton = styled.button`
-  font-size: 24px;
   background: none;
   border: none;
   cursor: pointer;
@@ -34,18 +24,33 @@ const Title = styled.h1`
   flex: 1;
 `;
 
-const Header = ({ title, showBackButton = false, onBack }) => {
-  const navigate = useNavigate();
+const MoreButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 12px;
+`;
 
+function Header({ title, showBackButton = false, showMoreButton = false }) {
   return (
     <HeaderWrapper>
+      {/* 뒤로가기 버튼 */}
       {showBackButton && (
-        <BackButton onClick={onBack || (() => navigate(-1))}>&lt;</BackButton>
+        <BackButton>
+          <img src="/icon/chevron-left.svg" alt="" />
+        </BackButton>
       )}
+      {/* 타이틀 */}
       {title && <Title hasBackButton={showBackButton}>{title}</Title>}
+      {/* 더보기 버튼 */}
+      {showMoreButton && (
+        <MoreButton>
+          <img src="" alt="" />
+        </MoreButton>
+      )}
     </HeaderWrapper>
   );
-};
+}
 
 export default Header;
->>>>>>> Stashed changes
